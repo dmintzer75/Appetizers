@@ -23,8 +23,7 @@ struct ListView: View {
                 viewModel.getAppetizers()
             }
             if viewModel.isLoading {
-                ProgressView()
-                    .frame(width: .infinity, height: .infinity)
+                LoadingView()
             }
         }
         .alert(item: $viewModel.alertItem) { alertItem in

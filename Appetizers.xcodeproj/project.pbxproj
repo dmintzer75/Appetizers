@@ -20,6 +20,7 @@
 		83A9929D2AD9B3CD0083321C /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9929C2AD9B3CD0083321C /* APError.swift */; };
 		83A992A02AD9D45D0083321C /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9929F2AD9D45D0083321C /* AppetizerListViewModel.swift */; };
 		83A992A42AD9D6740083321C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A992A32AD9D6740083321C /* Alert.swift */; };
+		83A992A62ADA0BEF0083321C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A992A52ADA0BEF0083321C /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		83A9929C2AD9B3CD0083321C /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
 		83A9929F2AD9D45D0083321C /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
 		83A992A32AD9D6740083321C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		83A992A52ADA0BEF0083321C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				83A992952AD769000083321C /* AccountView.swift */,
 				83A9929A2AD86A320083321C /* NetworkManager.swift */,
 				83A9929C2AD9B3CD0083321C /* APError.swift */,
+				83A992A52ADA0BEF0083321C /* LoadingView.swift */,
 			);
 			path = Appetizers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				83A992842AD7680F0083321C /* ContentView.swift in Sources */,
 				83A992A02AD9D45D0083321C /* AppetizerListViewModel.swift in Sources */,
 				83A992922AD768ED0083321C /* ListView.swift in Sources */,
+				83A992A62ADA0BEF0083321C /* LoadingView.swift in Sources */,
 				83A992902AD7683E0083321C /* HomeView.swift in Sources */,
 				83A9929B2AD86A320083321C /* NetworkManager.swift in Sources */,
 				83A992992AD833290083321C /* Appetizer.swift in Sources */,
