@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct HomeScreen: View {
     var body: some View {
         TabView {
-            ListView()
+            AppetizersListView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
@@ -31,5 +31,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeScreen()
 }

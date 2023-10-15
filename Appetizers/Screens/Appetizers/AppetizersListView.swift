@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListView: View {
+struct AppetizersListView: View {
     @StateObject var viewModel = AppetizerListViewModel()
 
     var body: some View {
@@ -15,12 +15,25 @@ struct ListView: View {
             NavigationStack {
                 List(viewModel.appetizers) { appetizer in
                     AppetizerListTile(appetizer: appetizer)
+                        .onTapGesture {
+                            viewModel.selectedAppetizer = appetizer
+                            viewModel.isShowingDetail = true
+                        }
                 }
                 .scrollIndicators(.hidden)
                 .navigationTitle("🌱 Plant Based Meals")
             }
             .onAppear {
                 viewModel.getAppetizers()
+                viewModel.isShowingDetail = false
+            }
+            .blur(radius: viewModel.isShowingDetail ? 15 : 0)
+            .disabled(viewModel.isShowingDetail)
+
+            if viewModel.isShowingDetail {
+                AppetizerDetailView(
+                    appetizer: viewModel.selectedAppetizer!,
+                    isShowingDetail: $viewModel.isShowingDetail)
             }
             if viewModel.isLoading {
                 LoadingView()
@@ -33,15 +46,14 @@ struct ListView: View {
 }
 
 #Preview {
-    ListView()
+    AppetizersListView()
 }
 
 struct AppetizerListTile: View {
     let appetizer: Appetizer
     var body: some View {
         HStack {
-            Image(appetizer.imageURL)
-                .resizable()
+            AppetizerRemoteImage(urlString: appetizer.imageURL)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 90)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
